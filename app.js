@@ -4,6 +4,8 @@ const expressLayout = require('express-ejs-layouts')
 const app = express()
 const PORT = 2000 || process.env.PORT
 
+app.use(express.static('public'))
+
 //template Engine
 app.use(expressLayout)
 app.set('layout', './layouts/main')
